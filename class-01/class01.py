@@ -1,2 +1,2 @@
-print("Irzam")
-print("Tahir")
+name = 700
+print(name)
