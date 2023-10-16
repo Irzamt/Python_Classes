@@ -1,2 +1,2 @@
-name = 700
-print(name)
+names : str = 700
+print(names)
