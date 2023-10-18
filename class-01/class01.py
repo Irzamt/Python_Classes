@@ -1,2 +1,2 @@
-names : str = 700
+names : int = 700
 print(names)
