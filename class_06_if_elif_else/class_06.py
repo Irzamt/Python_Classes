@@ -1,21 +1,28 @@
 from typing import Union
 
-per: Union[int, float] = 88
-grade: Union[str, None] = None
+PerType = Union[float, int]
 
-if per >= 80:
-    grade = "A+"
-elif per >= 70:
-    grade = "A"
-elif per >= 60:
-    grade = "B"
-elif per >= 50:
-    grade = "C"
-elif per >= 40:
-    grade = "D"
-elif per >= 33:
-    grade = "E"
-else:
-    grade = "Fail"
+percentages: list[PerType] = [88,99.9, 50, 51,65,70]
 
-print(f"Dear Student your percentage is {per}%\nyour calculated grade is: {grade}")
+grades: list[str] = []
+
+for per in percentages:
+    if per >= 0 and per < 33:
+        grade = "Fail"
+    elif per >= 33 and per < 40:
+        grade = "E"
+    elif per >= 40 and per < 50:
+        grade = "D"
+    elif per >= 50 and per < 60:
+        grade = "C"
+    elif per >= 60 and per <70 :
+        grade = "B"
+    elif per >= 70 and per <80 :
+        grade = "A"
+    elif per >=80 and per <= 100:
+        grade = "A+"
+
+    grades.append(grade)
+
+print(percentages)
+print(grades)
